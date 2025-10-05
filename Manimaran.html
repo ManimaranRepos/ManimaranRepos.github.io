@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manimaran Soundararajan - Senior .NET Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 25px;
+            animation: float 3s ease-in-out infinite;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            font-size: 3.2em;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease;
+            font-weight: 700;
+        }
+
+        .title {
+            font-size: 1.5em;
+            opacity: 0.95;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease 0.1s backwards;
+            font-weight: 500;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            opacity: 0.85;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s backwards;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease 0.3s backwards;
+        }
+
+        .contact-btn {
+            padding: 12px 28px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            font-size: 0.95em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 25px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #fff 0%, #a7c7ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 45px;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .section h2 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 600;
+        }
+
+        .section h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            opacity: 0.95;
+        }
+
+        .experience-grid {
+            display: grid;
+            gap: 25px;
+        }
+
+        .job-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .job-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .job-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .company {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .duration {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            white-space: nowrap;
+        }
+
+        .location {
+            opacity: 0.8;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+
+        .achievement {
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .achievement:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #a7c7ff;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background: rgba(167, 199, 255, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            text-align: center;
+            padding: 25px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .skill-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.08);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-icon {
+            font-size: 3em;
+            margin-bottom: 12px;
+        }
+
+        .skill-name {
+            font-weight: 500;
+        }
+
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .cert-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .cert-icon {
+            font-size: 2.5em;
+            margin-bottom: 12px;
+        }
+
+        .cert-title {
+            font-size: 1.1em;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .education-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .edu-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .edu-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(10px);
+        }
+
+        .degree {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .school {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .edu-years {
+            opacity: 0.8;
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px 30px;
+            opacity: 0.85;
+        }
+
+        .availability {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));
+            border: 2px solid rgba(34, 197, 94, 0.4);
+            padding: 15px 30px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            font-weight: 500;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .title {
+                font-size: 1.2em;
+            }
+            
+            .tagline {
+                font-size: 1em;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-img">👨‍💻</div>
+            <h1>Manimaran Soundararajan</h1>
+            <p class="title">Senior .NET Developer | 8+ Years Experience | 2 Years UAE On-Site</p>
+            <p class="tagline">.NET Core • AI/LLM • Cloud (AWS/Azure) • Microservices • DevOps • CI/CD</p>
+            
+            <div class="availability">
+                ✅ Available for Dubai/UAE opportunities from October 2025
+            </div>
+            
+            <div class="contact-links">
+                <a href="tel:+919843318195" class="contact-btn">📞 +91 98433 18195</a>
+                <a href="mailto:smanimarancse@gmail.com" class="contact-btn">✉️ Email Me</a>
+                <a href="https://www.linkedin.com/in/manimaran24" class="contact-btn" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/manimaran24" class="contact-btn" target="_blank">💻 GitHub</a>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">8+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Years UAE On-Site</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Major Companies</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">99.95%</span>
+                    <span class="stat-label">Uptime Achievement</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2>🚀 Professional Summary</h2>
+            <p style="font-size: 1.15em; line-height: 1.8; opacity: 0.95;">
+                Senior Software Developer with <strong>8+ years</strong> of expertise in <strong>.NET Core, C#, SQL Server, Cloud (AWS/Azure)</strong>, and modern architectures. Proven track record of delivering scalable enterprise applications, optimizing performance up to <span class="highlight">60%</span>, and driving automation through DevOps practices. Worked <strong>2 years on-site in the UAE</strong>, collaborating with international teams and delivering high-quality solutions aligned with business needs. Recently focused on <strong>AI/LLM solution integration</strong> and cloud-native development to enable digital transformation.
+            </p>
+            <br>
+            <p style="font-size: 1.1em; line-height: 1.8; opacity: 0.95;">
+                <strong>Core Expertise:</strong> Full-stack .NET Core development • Microservices & API design • AI/LLM integration • CI/CD, DevOps • Cloud (AWS/Azure) • Strong stakeholder engagement & cross-cultural collaboration
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>💼 Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">Tata Consultancy Services</div>
+                            <div class="job-title">.NET Core Developer – CI/CD & DevOps</div>
+                            <div class="location">📍 Chennai, Tamil Nadu, India</div>
+                        </div>
+                        <div class="duration">Jan 2023 - Present</div>
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>Vulnerability Management with GitHub Copilot:</strong> Leveraged AI to identify and remediate vulnerabilities across .NET Core applications
+                        <br>💡 <span class="highlight">Impact:</span> Reduced remediation time by 65%, improved security posture by 40%
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>Containerization & Orchestration:</strong> Containerized applications using Docker and Kubernetes
+                        <br>💡 <span class="highlight">Impact:</span> Achieved 99.95% uptime, scaled from 10 to 1000+ users seamlessly
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>CI/CD Pipeline Development:</strong> Built automated pipelines with infrastructure-as-code
+                        <br>💡 <span class="highlight">Impact:</span> Accelerated from monthly to daily deployments, reduced manual intervention by 85%
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>Code Quality & Monitoring:</strong> Integrated SonarQube and Splunk for quality gates and monitoring
+                        <br>💡 <span class="highlight">Impact:</span> Improved code quality by 60%, reduced critical bugs by 80%, achieved 15-min incident resolution
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>Microservices Architecture:</strong> Developed cloud-native .NET Core microservices with comprehensive APIs
+                        <br>💡 <span class="highlight">Impact:</span> Enhanced modularity, accelerated feature delivery by 40%
+                    </div>
+                    
+                    <p style="margin-top: 20px; font-style: italic; opacity: 0.9;">
+                        🏆 <strong>Notable:</strong> DevOps Leader - Spearheaded containerization across 15+ teams • Built reusable CI/CD templates reducing deployment time by 75%
+                    </p>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">LTI - Larsen & Toubro Infotech</div>
+                            <div class="job-title">.NET Developer – AWS Cloud</div>
+                            <div class="location">📍 Chennai, Tamil Nadu, India</div>
+                        </div>
+                        <div class="duration">Oct 2021 - Jan 2023</div>
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>Cloud Migration Leadership:</strong> Migrated legacy applications to AWS (EC2, S3, RDS) with ASP.NET MVC & C#
+                        <br>💡 <span class="highlight">Impact:</span> Improved scalability by 300%, reduced costs by 40%, enabled scaling for 10,000+ concurrent users
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>DevOps Automation:</strong> Implemented AWS CodePipeline & CodeDeploy for full automation
+                        <br>💡 <span class="highlight">Impact:</span> Cut manual effort by 50%, reduced deployment from 4 hours to 15 minutes
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>Database Optimization:</strong> Tuned SQL queries for high-traffic applications
+                        <br>💡 <span class="highlight">Impact:</span> Reduced API response times by 60%, boosted client satisfaction by 35%
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>Cloud Architecture:</strong> Designed solutions using AWS Well-Architected Framework
+                        <br>💡 <span class="highlight">Impact:</span> Achieved 99.9% uptime, built reusable templates for faster delivery
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>Incident Management:</strong> Supported Liberty Insurance clients via Dynatrace monitoring and bridge calls
+                        <br>💡 <span class="highlight">Impact:</span> Accelerated resolution, earned direct positive client feedback
+                    </div>
+                    
+                    <p style="margin-top: 20px; font-style: italic; opacity: 0.9;">
+                        🏆 <strong>Notable:</strong> Cloud Migration Champion - Migrated 5+ apps with zero downtime • Built company-wide CI/CD pipelines
+                    </p>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">Cognizant</div>
+                            <div class="job-title">.NET Developer – Azure & DevOps</div>
+                            <div class="location">📍 Chennai, Tamil Nadu, India</div>
+                        </div>
+                        <div class="duration">Apr 2019 - Oct 2021</div>
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>Enterprise Application Development:</strong> Developed robust applications using ASP.NET MVC, C#, SQL Server, and Git
+                        <br>💡 <span class="highlight">Impact:</span> Streamlined collaboration, reduced deployment errors with standardized workflows
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>Performance Optimization:</strong> Enhanced system performance through SQL optimization and code refactoring
+                        <br>💡 <span class="highlight">Impact:</span> Achieved 30-40% reduction in response times, handled higher user loads
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>Client-Centric Delivery:</strong> Direct client collaboration for requirements and production support
+                        <br>💡 <span class="highlight">Impact:</span> Built lasting client trust, reduced manual escalations by 60%
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">Napeans Technologies</div>
+                            <div class="job-title">.NET Developer (Dubai Municipality)</div>
+                            <div class="location">📍 Dubai, United Arab Emirates 🇦🇪</div>
+                        </div>
+                        <div class="duration">Apr 2017 - Apr 2019</div>
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>Government Web Application Development:</strong> Developed mission-critical applications for Dubai Municipality's Environmental Services using ASP.NET MVC, SQL Server, JavaScript, jQuery
+                        <br>💡 <span class="highlight">Impact:</span> Streamlined government processes, reduced manual paperwork by 50%
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>End-to-End Deployment:</strong> Managed complete lifecycle from development to production
+                        <br>💡 <span class="highlight">Impact:</span> Achieved 99% uptime for critical government apps, reduced deployment from hours to minutes
+                    </div>
+                    
+                    <div class="achievement">
+                        <strong>Stakeholder Management:</strong> Direct collaboration with government officials and end-users
+                        <br>💡 <span class="highlight">Impact:</span> Built exceptional rapport, delivered 100% of projects on time, received commendations
+                    </div>
+                    
+                    <p style="margin-top: 20px; font-style: italic; opacity: 0.9;">
+                        🏆 <strong>Notable:</strong> Successfully delivered government-grade applications serving Dubai Municipality, contributing to Dubai's smart city initiatives
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💡 Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-icon">⚙️</div>
+                    <div class="skill-name">.NET Core</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🎯</div>
+                    <div class="skill-name">C#</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">☁️</div>
+                    <div class="skill-name">AWS</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🔷</div>
+                    <div class="skill-name">Azure</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🐳</div>
+                    <div class="skill-name">Docker</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">☸️</div>
+                    <div class="skill-name">Kubernetes</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🔄</div>
+                    <div class="skill-name">CI/CD</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">📊</div>
+                    <div class="skill-name">SQL Server</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🤖</div>
+                    <div class="skill-name">AI/LLM</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🏗️</div>
+                    <div class="skill-name">Microservices</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🔗</div>
+                    <div class="skill-name">REST APIs</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">📈</div>
+                    <div class="skill-name">DevOps</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎓 Certifications</h2>
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">☁️</div>
+                    <div class="cert-title">AWS Certified Solutions Architect – Associate</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🤖</div>
+                    <div class="cert-title">Prompt Engineering: How to Talk to the AIs</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">⚙️</div>
+                    <div class="cert-title">DOT NET Certification</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎓 Education</h2>
+            <div class="education-grid">
+                <div class="edu-card">
+                    <div class="degree">Master of Engineering (M.Eng) - Computer Science</div>
+                    <div class="school">Saveetha School of Engineering</div>
+                    <div class="edu-years">August 2012 - May 2014</div>
+                </div>
+                <div class="edu-card">
+                    <div class="degree">Bachelor of Engineering (B.E.) - Computer Science</div>
+                    <div class="school">Thirumalai Engineering College</div>
+                    <div class="edu-years">June 2007 - June 2011</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📫 Let's Connect</h2>
+            <p style="font-size: 1.2em; text-align: center; margin: 20px 0 30px; line-height: 1.8;">
+                I'm actively seeking <strong>Dubai/UAE opportunities</strong> starting <strong>October 2025</strong>.<br>
+                Open to discussing new projects, collaborations, and opportunities in .NET, Cloud, and AI/LLM domains.
+            </p>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="mailto:smanimarancse@gmail.com" class="contact-btn" style="font-size: 1.15em; padding: 15px 40px;">
+                    💬 Get In Touch
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p style="font-size: 1.1em;">© 2025 Manimaran Soundararajan. Built with expertise and passion.</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Senior .NET Developer | 8+ Years | Chennai, India | Available for UAE 🇦🇪</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href'))?.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.job-card, .skill-item, .cert-card, .edu-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
