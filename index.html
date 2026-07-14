@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manimaran Soundararajan - Senior .NET Developer</title>
+    <title>Manimaran Soundararajan - Senior .NET Developer | AI/MLOps Specialist</title>
     <style>
         * {
             margin: 0;
@@ -46,6 +46,13 @@
             margin-left: auto;
             margin-right: auto;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
         }
 
         @keyframes float {
@@ -262,6 +269,93 @@
             font-weight: 500;
         }
 
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .project-desc {
+            font-size: 0.95em;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tech-tag {
+            background: rgba(167, 199, 255, 0.25);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            border: 1px solid rgba(167, 199, 255, 0.4);
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(167, 199, 255, 0.2);
+            border: 1px solid rgba(167, 199, 255, 0.4);
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .project-link:hover {
+            background: rgba(167, 199, 255, 0.35);
+            transform: translateX(5px);
+        }
+
+        .dubai-highlight {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.1));
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .dubai-highlight h3 {
+            color: #ffd700;
+            margin-top: 0;
+        }
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -420,20 +514,20 @@
 <body>
     <div class="container">
         <header>
-            <div class="profile-img">👨‍💻
-                <img src="https://avatars.githubusercontent.com/u/33491439?v=4">
+            <div class="profile-img">
+                <img src="https://avatars.githubusercontent.com/u/33491439?v=4" alt="Manimaran Soundararajan">
             </div>
             <h1>Manimaran Soundararajan</h1>
-            <p class="title">Senior .NET Developer | 8+ Years Experience | 2 Years UAE On-Site</p>
-            <p class="tagline">.NET Core • AI/LLM • Cloud (AWS/Azure) • Microservices • DevOps • CI/CD</p>
+            <p class="title">Senior .NET Developer | AI/MLOps Specialist | 8+ Years Experience</p>
+            <p class="tagline">.NET Core • AI/LLM • MLOps • Cloud (AWS/Azure) • Microservices • DevOps • CI/CD</p>
             
             <div class="availability">
-                ✅ Available for Dubai/UAE opportunities from October 2025
+                ✅ Available for Dubai/UAE opportunities
             </div>
             
             <div class="contact-links">
                 <a href="tel:+919843318195" class="contact-btn">📞 +91 98433 18195</a>
-                <a href="mailto:smanimarancse@gmail.com" class="contact-btn">✉️ Email Me</a>
+                <a href="mailto:smanimarancse@gmail.com" class="contact-btn">✉️ Email</a>
                 <a href="https://www.linkedin.com/in/manimaran24" class="contact-btn" target="_blank">💼 LinkedIn</a>
                 <a href="https://github.com/ManimaranRepos" class="contact-btn" target="_blank">💻 GitHub</a>
             </div>
@@ -448,8 +542,8 @@
                     <span class="stat-label">Years UAE On-Site</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">4</span>
-                    <span class="stat-label">Major Companies</span>
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Projects Delivered</span>
                 </div>
                 <div class="stat-card">
                     <span class="stat-number">99.95%</span>
@@ -461,12 +555,97 @@
         <div class="section">
             <h2>🚀 Professional Summary</h2>
             <p style="font-size: 1.15em; line-height: 1.8; opacity: 0.95;">
-                Senior Software Developer with <strong>8+ years</strong> of expertise in <strong>.NET Core, C#, SQL Server, Cloud (AWS/Azure)</strong>, and modern architectures. Proven track record of delivering scalable enterprise applications, optimizing performance up to <span class="highlight">60%</span>, and driving automation through DevOps practices. Worked <strong>2 years on-site in the UAE</strong>, collaborating with international teams and delivering high-quality solutions aligned with business needs. Recently focused on <strong>AI/LLM solution integration</strong> and cloud-native development to enable digital transformation.
+                Senior Software Developer with <strong>8+ years</strong> of expertise in <strong>.NET Core, C#, Python, SQL Server, Cloud (AWS/Azure)</strong>, and modern architectures. Proven track record delivering enterprise solutions, AI/LLM integrations, and MLOps platforms for global clients.
             </p>
             <br>
             <p style="font-size: 1.1em; line-height: 1.8; opacity: 0.95;">
-                <strong>Core Expertise:</strong> Full-stack .NET Core development • Microservices & API design • AI/LLM integration • CI/CD, DevOps • Cloud (AWS/Azure) • Strong stakeholder engagement & cross-cultural collaboration
+                <strong>Core Expertise:</strong> Full-stack .NET Core development • AI/LLM integration (Semantic Kernel, Azure OpenAI) • MLOps & Data Engineering • Microservices & API design • CI/CD, DevOps (Docker, Kubernetes, ArgoCD) • Cloud Architecture (AWS/Azure) • Strong stakeholder management
             </p>
+        </div>
+
+        <div class="section">
+            <h2>🌟 Featured Projects (AI/MLOps)</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">🤖</div>
+                    <div class="project-title">SahlAI-MVP</div>
+                    <div class="project-desc">WhatsApp AI Chatbot for Dubai SMEs using .NET 8, Azure OpenAI, and WhatsApp Cloud API</div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">C#/.NET 8</span>
+                        <span class="tech-tag">Azure OpenAI</span>
+                        <span class="tech-tag">WhatsApp API</span>
+                    </div>
+                    <a href="https://github.com/ManimaranRepos/SahlAI-MVP" class="project-link">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">📊</div>
+                    <div class="project-title">Churn MLOps Platform</div>
+                    <div class="project-desc">Production-ready MLOps pipeline with Airflow, ArgoCD, AWS EKS, and XGBoost for churn prediction</div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MLOps</span>
+                        <span class="tech-tag">AWS/Kubernetes</span>
+                    </div>
+                    <a href="https://github.com/ManimaranRepos/churn-mlops-platform" class="project-link">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">📚</div>
+                    <div class="project-title">Semantic Kernel RAG API</div>
+                    <div class="project-desc">Document Q&A system with C#, Semantic Kernel, Azure OpenAI, and vector embeddings</div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Semantic Kernel</span>
+                        <span class="tech-tag">RAG/Embeddings</span>
+                    </div>
+                    <a href="https://github.com/ManimaranRepos/semantic-kernel-rag-api" class="project-link">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">🎯</div>
+                    <div class="project-title">Atlas RAG</div>
+                    <div class="project-desc">Advanced retrieval-augmented generation system for intelligent document processing</div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">LLMs</span>
+                    </div>
+                    <a href="https://github.com/ManimaranRepos/atlas-rag" class="project-link">View on GitHub →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🇦🇪 Dubai/UAE Experience & Achievements</h2>
+            <div class="dubai-highlight">
+                <h3>✨ Government-Grade Solutions for Dubai Municipality</h3>
+                <div class="achievement">
+                    <strong>Environmental Services Web Portal:</strong> Developed mission-critical applications for Dubai Municipality serving thousands of citizens
+                </div>
+                <div class="achievement">
+                    <strong>Smart City Contribution:</strong> Participated in Dubai's digital transformation initiatives with 99% uptime systems
+                </div>
+                <div class="achievement">
+                    <strong>Stakeholder Management:</strong> Direct collaboration with UAE government officials, delivering 100% of projects on-time with commendations
+                </div>
+                <div class="achievement">
+                    <strong>Local Market Understanding:</strong> Proven expertise in UAE business requirements and government compliance standards
+                </div>
+            </div>
+
+            <div class="dubai-highlight">
+                <h3>🚀 Current Dubai-Focused Initiatives</h3>
+                <div class="achievement">
+                    <strong>SahlAI for Dubai SMEs:</strong> Building AI-powered WhatsApp chatbots specifically designed for small/medium enterprises in Dubai and UAE
+                </div>
+                <div class="achievement">
+                    <strong>Regional Tech Stack:</strong> Expertise in Azure ecosystem (preferred cloud provider in UAE) and enterprise architecture
+                </div>
+                <div class="achievement">
+                    <strong>2+ Years On-Site Experience:</strong> Familiar with UAE workplace culture, visa processes, and business practices
+                </div>
+            </div>
         </div>
 
         <div class="section">
@@ -502,11 +681,6 @@
                         <br>💡 <span class="highlight">Impact:</span> Improved code quality by 60%, reduced critical bugs by 80%, achieved 15-min incident resolution
                     </div>
                     
-                    <div class="achievement">
-                        <strong>Microservices Architecture:</strong> Developed cloud-native .NET Core microservices with comprehensive APIs
-                        <br>💡 <span class="highlight">Impact:</span> Enhanced modularity, accelerated feature delivery by 40%
-                    </div>
-                    
                     <p style="margin-top: 20px; font-style: italic; opacity: 0.9;">
                         🏆 <strong>Notable:</strong> DevOps Leader - Spearheaded containerization across 15+ teams • Built reusable CI/CD templates reducing deployment time by 75%
                     </p>
@@ -537,45 +711,9 @@
                         <br>💡 <span class="highlight">Impact:</span> Reduced API response times by 60%, boosted client satisfaction by 35%
                     </div>
                     
-                    <div class="achievement">
-                        <strong>Cloud Architecture:</strong> Designed solutions using AWS Well-Architected Framework
-                        <br>💡 <span class="highlight">Impact:</span> Achieved 99.9% uptime, built reusable templates for faster delivery
-                    </div>
-                    
-                    <div class="achievement">
-                        <strong>Incident Management:</strong> Supported Liberty Insurance clients via Dynatrace monitoring and bridge calls
-                        <br>💡 <span class="highlight">Impact:</span> Accelerated resolution, earned direct positive client feedback
-                    </div>
-                    
                     <p style="margin-top: 20px; font-style: italic; opacity: 0.9;">
                         🏆 <strong>Notable:</strong> Cloud Migration Champion - Migrated 5+ apps with zero downtime • Built company-wide CI/CD pipelines
                     </p>
-                </div>
-
-                <div class="job-card">
-                    <div class="job-header">
-                        <div>
-                            <div class="company">Cognizant</div>
-                            <div class="job-title">.NET Developer – Azure & DevOps</div>
-                            <div class="location">📍 Chennai, Tamil Nadu, India</div>
-                        </div>
-                        <div class="duration">Apr 2019 - Oct 2021</div>
-                    </div>
-                    
-                    <div class="achievement">
-                        <strong>Enterprise Application Development:</strong> Developed robust applications using ASP.NET MVC, C#, SQL Server, and Git
-                        <br>💡 <span class="highlight">Impact:</span> Streamlined collaboration, reduced deployment errors with standardized workflows
-                    </div>
-                    
-                    <div class="achievement">
-                        <strong>Performance Optimization:</strong> Enhanced system performance through SQL optimization and code refactoring
-                        <br>💡 <span class="highlight">Impact:</span> Achieved 30-40% reduction in response times, handled higher user loads
-                    </div>
-                    
-                    <div class="achievement">
-                        <strong>Client-Centric Delivery:</strong> Direct client collaboration for requirements and production support
-                        <br>💡 <span class="highlight">Impact:</span> Built lasting client trust, reduced manual escalations by 60%
-                    </div>
                 </div>
 
                 <div class="job-card">
@@ -589,13 +727,13 @@
                     </div>
                     
                     <div class="achievement">
-                        <strong>Government Web Application Development:</strong> Developed mission-critical applications for Dubai Municipality's Environmental Services using ASP.NET MVC, SQL Server, JavaScript, jQuery
+                        <strong>Government Web Application Development:</strong> Developed mission-critical applications for Dubai Municipality's Environmental Services using ASP.NET MVC and SQL Server
                         <br>💡 <span class="highlight">Impact:</span> Streamlined government processes, reduced manual paperwork by 50%
                     </div>
                     
                     <div class="achievement">
                         <strong>End-to-End Deployment:</strong> Managed complete lifecycle from development to production
-                        <br>💡 <span class="highlight">Impact:</span> Achieved 99% uptime for critical government apps, reduced deployment from hours to minutes
+                        <br>💡 <span class="highlight">Impact:</span> Achieved 99% uptime for critical government apps
                     </div>
                     
                     <div class="achievement">
@@ -622,6 +760,10 @@
                     <div class="skill-name">C#</div>
                 </div>
                 <div class="skill-item">
+                    <div class="skill-icon">🐍</div>
+                    <div class="skill-name">Python</div>
+                </div>
+                <div class="skill-item">
                     <div class="skill-icon">☁️</div>
                     <div class="skill-name">AWS</div>
                 </div>
@@ -638,28 +780,24 @@
                     <div class="skill-name">Kubernetes</div>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-icon">🔄</div>
-                    <div class="skill-name">CI/CD</div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">📊</div>
-                    <div class="skill-name">SQL Server</div>
-                </div>
-                <div class="skill-item">
                     <div class="skill-icon">🤖</div>
                     <div class="skill-name">AI/LLM</div>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-icon">🏗️</div>
-                    <div class="skill-name">Microservices</div>
+                    <div class="skill-icon">📊</div>
+                    <div class="skill-name">MLOps</div>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-icon">🔗</div>
-                    <div class="skill-name">REST APIs</div>
+                    <div class="skill-icon">🔄</div>
+                    <div class="skill-name">CI/CD</div>
                 </div>
                 <div class="skill-item">
                     <div class="skill-icon">📈</div>
                     <div class="skill-name">DevOps</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🏗️</div>
+                    <div class="skill-name">Microservices</div>
                 </div>
             </div>
         </div>
@@ -673,11 +811,11 @@
                 </div>
                 <div class="cert-card">
                     <div class="cert-icon">🤖</div>
-                    <div class="cert-title">Prompt Engineering: How to Talk to the AIs</div>
+                    <div class="cert-title">Claude Certified Architect – Foundations</div>
                 </div>
                 <div class="cert-card">
-                    <div class="cert-icon">⚙️</div>
-                    <div class="cert-title">DOT NET Certification</div>
+                    <div class="cert-icon">💬</div>
+                    <div class="cert-title">Prompt Engineering: How to Talk to the AIs</div>
                 </div>
             </div>
         </div>
@@ -701,19 +839,25 @@
         <div class="section">
             <h2>📫 Let's Connect</h2>
             <p style="font-size: 1.2em; text-align: center; margin: 20px 0 30px; line-height: 1.8;">
-                I'm actively seeking <strong>Dubai/UAE opportunities</strong> starting <strong>October 2025</strong>.<br>
-                Open to discussing new projects, collaborations, and opportunities in .NET, Cloud, and AI/LLM domains.
+                I'm actively seeking <strong>Dubai/UAE opportunities</strong> in .NET, AI/LLM, and MLOps domains.<br>
+                Open to discussing new projects, collaborations, and innovation opportunities.
             </p>
-            <div style="text-align: center; margin-top: 30px;">
+            <div style="text-align: center; margin-top: 30px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                 <a href="mailto:smanimarancse@gmail.com" class="contact-btn" style="font-size: 1.15em; padding: 15px 40px;">
-                    💬 Get In Touch
+                    💬 Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/manimaran24" class="contact-btn" target="_blank" style="font-size: 1.15em; padding: 15px 40px;">
+                    💼 LinkedIn Profile
+                </a>
+                <a href="https://github.com/ManimaranRepos" class="contact-btn" target="_blank" style="font-size: 1.15em; padding: 15px 40px;">
+                    💻 GitHub Portfolio
                 </a>
             </div>
         </div>
 
         <footer>
             <p style="font-size: 1.1em;">© 2025 Manimaran Soundararajan. Built with expertise and passion.</p>
-            <p style="margin-top: 10px; opacity: 0.8;">Senior .NET Developer | 8+ Years | Chennai, India | Available for UAE 🇦🇪</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Senior .NET Developer | AI/MLOps Specialist | 8+ Years | Available for Dubai 🇦🇪</p>
         </footer>
     </div>
 
@@ -741,7 +885,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.job-card, .skill-item, .cert-card, .edu-card').forEach(el => {
+        document.querySelectorAll('.job-card, .skill-item, .cert-card, .edu-card, .project-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
